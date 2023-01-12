@@ -20,7 +20,7 @@
 		 * @param string $api
 		 *
 		 */
-		public function __construct(string $api)
+		private function __construct(string $api)
 		{
 			$this->api = $api;
 		}
@@ -54,9 +54,9 @@
 		
 		/**
 		 * Gets the environment's Api URL
-		 * @return mixed
+		 * @return string the Api URL
 		 */
-		public function getUrlApi()
+		public function getUrlApi(): string
 		{
 			return $this->api;
 		}
