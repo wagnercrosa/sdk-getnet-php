@@ -1,0 +1,11 @@
+/vendor/
+/.settings/
+/.project
+.buildpath
+composer.lock
+/build
+/vendor
+/.idea
+/tests/tmp
+/tests/.phpunit.result.cache
+config/env.test.php
