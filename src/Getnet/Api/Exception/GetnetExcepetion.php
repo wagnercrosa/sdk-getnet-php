@@ -1,8 +1,8 @@
 <?php
 	
-	namespace Source\Api\Excepetion;
+	namespace Source\Api\Exception;
 	
-	class GetnetExcepetion extends \RuntimeException
+	class GetnetException extends \RuntimeException
 	{
 		
 	}
