@@ -4,10 +4,9 @@
 	
 	/**
 	 *
-	 * Class Environment
+	 * Class Getnet
 	 *
-	 * @package Source\Api\Environment
-	 *
+	 * @package Getnet\Api
 	 *
 	 * @author Wagner Corrêa
 	 *
