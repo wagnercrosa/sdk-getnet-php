@@ -106,7 +106,7 @@
 		 *
 		 * @return Environment
 		 */
-		public function getEnvironment()
+		public function getEnvironment(): Environment
 		{
 			return $this->environment;
 		}
