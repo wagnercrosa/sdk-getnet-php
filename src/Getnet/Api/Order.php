@@ -30,7 +30,6 @@
 		private $sales_tax = 0;
 		
 		/**
-		 *
 		 * @param string|null $order_id
 		 */
 		public function __construct(string $order_id = null)
@@ -39,16 +38,14 @@
 		}
 		
 		/**
-		 *
-		 * @return string|null
+		 * @return mixed
 		 */
-		public function getOrderId(): ?string
+		public function getOrderId()
 		{
 			return $this->order_id;
 		}
 		
 		/**
-		 *
 		 * @param mixed $order_id
 		 */
 		public function setOrderId($order_id): string
@@ -66,12 +63,13 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $product_type
 		 */
-		public function setProductType($product_type): string
+		public function setProductType($product_type): Order
 		{
-			return $this->product_type = (string) $product_type;
+			$this->product_type = (string) $product_type;
+			
+			return $this;
 		}
 		
 		/**
@@ -87,7 +85,7 @@
 		 *
 		 * @param mixed $sales_tax
 		 */
-		public function setSalesTax($sales_tax): int
+		public function setSalesTax($sales_tax)
 		{
 			return $this->sales_tax = (int) ($sales_tax * 100);
 		}

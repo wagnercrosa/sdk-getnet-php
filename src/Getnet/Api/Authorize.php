@@ -43,7 +43,8 @@
 		 */
 		public function setRedirectUrl($redirect_url)
 		{
-			return $this->redirect_url = $redirect_url;
+			$this->redirect_url = $redirect_url;
+			return $this;
 		}
 		
 		/**
@@ -61,7 +62,8 @@
 		 */
 		public function setIssuerPaymentId($issuer_payment_id)
 		{
-			return $this->issuer_payment_id = $issuer_payment_id;
+			$this->issuer_payment_id = $issuer_payment_id;
+			return $this;
 		}
 		
 		/**
@@ -79,7 +81,8 @@
 		 */
 		public function setPayerAuthenticationRequest($payer_authentication_request)
 		{
-			return $this->payer_authentication_request = $payer_authentication_request;
+			$this->payer_authentication_request = $payer_authentication_request;
+			return $this;
 		}
 		
 		/**
@@ -92,13 +95,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $delayed
-		 * @return Authorize
 		 */
-		public function setDelayed($delayed): Authorize
+		public function setDelayed($delayed)
 		{
-			return  $this->delayed = $delayed;
+			$this->delayed = $delayed;
+			return $this;
 		}
 		
 		/**
@@ -111,13 +113,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $authorization_code
-		 * @return Authorize
 		 */
-		public function setAuthorizationCode($authorization_code): Authorize
+		public function setAuthorizationCode($authorization_code)
 		{
-			return $this->authorization_code = $authorization_code;
+			$this->authorization_code = $authorization_code;
+			return $this;
 		}
 		
 		/**
@@ -130,13 +131,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $authorized_at
-		 * @return Authorize
 		 */
 		public function setAuthorizedAt($authorized_at): Authorize
 		{
-			return $this->authorized_at = $authorized_at;
+			$this->authorized_at = $authorized_at;
+			return $this;
 		}
 		
 		/**
@@ -149,13 +149,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $reason_code
-		 * @return Authorize
 		 */
-		public function setReasonCode($reason_code): Authorize
+		public function setReasonCode($reason_code)
 		{
-			return $this->reason_code = $reason_code;
+			$this->reason_code = $reason_code;
+			return $this;
 		}
 		
 		/**
@@ -168,13 +167,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $reason_message
-		 * @return Authorize
 		 */
-		public function setReasonMessage($reason_message): Authorize
+		public function setReasonMessage($reason_message)
 		{
-			return $this->reason_message = $reason_message;
+			$this->reason_message = $reason_message;
+			return $this;
 		}
 		
 		/**
@@ -187,13 +185,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $acquirer
-		 * @return Authorize
 		 */
-		public function setAcquirer($acquirer): Authorize
+		public function setAcquirer($acquirer)
 		{
-			return $this->acquirer = $acquirer;
+			$this->acquirer = $acquirer;
+			return $this;
 		}
 		
 		/**
@@ -206,13 +203,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $soft_descriptor
-		 * @return Authorize
 		 */
-		public function setSoftDescriptor($soft_descriptor): Authorize
+		public function setSoftDescriptor($soft_descriptor)
 		{
-			return $this->soft_descriptor = $soft_descriptor;
+			$this->soft_descriptor = $soft_descriptor;
+			return $this;
 		}
 		
 		/**
@@ -225,13 +221,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $brand
-		 * @return Authorize
 		 */
-		public function setBrand($brand): Authorize
+		public function setBrand($brand)
 		{
-			return $this->brand = $brand;
+			$this->brand = $brand;
+			return $this;
 		}
 		
 		/**
@@ -244,13 +239,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $terminal_nsu
-		 * @return Authorize
 		 */
-		public function setTerminalNsu($terminal_nsu): Authorize
+		public function setTerminalNsu($terminal_nsu)
 		{
-			return $this->terminal_nsu = $terminal_nsu;
+			$this->terminal_nsu = $terminal_nsu;
+			return $this;
 		}
 		
 		/**
@@ -263,12 +257,11 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $acquirer_transaction_id
-		 * @return Authorize
 		 */
-		public function setAcquirerTransactionId($acquirer_transaction_id): Authorize
+		public function setAcquirerTransactionId($acquirer_transaction_id)
 		{
-			return $this->acquirer_transaction_id = $acquirer_transaction_id;
+			$this->acquirer_transaction_id = $acquirer_transaction_id;
+			return $this;
 		}
 	}

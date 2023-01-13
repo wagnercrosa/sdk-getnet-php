@@ -20,7 +20,6 @@
 		 * Request constructor.
 		 *
 		 * @param Getnet $credentials
-		 * @throws Exception
 		 */
 		public function __construct(Getnet $credentials)
 		{
@@ -35,7 +34,6 @@
 		 *
 		 * @param Getnet $credentials
 		 * @return Getnet
-		 * @throws Exception
 		 */
 		public function auth(Getnet $credentials): Getnet
 		{
@@ -65,9 +63,6 @@
 		 * @param mixed $url_path
 		 * @param mixed $method
 		 * @param mixed $jsonBody
-		 * @return mixed
-		 * @throws Exception
-		 * @throws \Exception
 		 */
 		private function send(Getnet $credentials, $url_path, $method, $jsonBody = null)
 		{
@@ -194,8 +189,6 @@
 		 * @param Getnet $credentials
 		 * @param mixed $url_path
 		 * @param mixed $params
-		 * @return mixed * @throws Exception
-		 * @throws Exception
 		 */
 		public function post(Getnet $credentials, $url_path, $params)
 		{

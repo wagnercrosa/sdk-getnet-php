@@ -25,7 +25,6 @@
 		private $street;
 		
 		/**
-		 *
 		 * @param $postal_code
 		 */
 		public function __construct($postal_code = null)
@@ -34,7 +33,6 @@
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getCity()
@@ -43,16 +41,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $city
 		 */
-		public function setCity($city): string
+		public function setCity($city)
 		{
-			return $this->city = (string) $city;
+			$this->city = (string) $city;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getComplement()
@@ -61,16 +58,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $complement
 		 */
-		public function setComplement($complement): string
+		public function setComplement($complement)
 		{
-			return $this->complement = (string) $complement;
+			$this->complement = (string) $complement;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getCountry()
@@ -79,16 +75,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $country
 		 */
-		public function setCountry($country): string
+		public function setCountry($country)
 		{
-			return $this->country = (string) $country;
+			$this->country = (string) $country;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getDistrict()
@@ -97,16 +92,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $district
 		 */
-		public function setDistrict($district): string
+		public function setDistrict($district)
 		{
-			return $this->district = (string) $district;
+			$this->district = (string) $district;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getNumber()
@@ -115,16 +109,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $number
 		 */
-		public function setNumber($number): string
+		public function setNumber($number)
 		{
-			return $this->number = (string) $number;
+			$this->number = (string) $number;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getPostalCode()
@@ -133,16 +126,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $postal_code
 		 */
-		public function setPostalCode($postal_code): string
+		public function setPostalCode($postal_code)
 		{
-			return $this->postal_code = (string) $postal_code;
+			$this->postal_code = (string) $postal_code;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getState()
@@ -151,16 +143,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $state
 		 */
-		public function setState($state): string
+		public function setState($state)
 		{
-			return $this->state = (string) $state;
+			$this->state = (string) $state;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getStreet()
@@ -169,11 +160,11 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $street
 		 */
-		public function setStreet($street): string
+		public function setStreet($street)
 		{
-			return $this->street = (string) $street;
+			$this->street = (string) $street;
+			return $this;
 		}
 	}

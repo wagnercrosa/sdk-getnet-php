@@ -47,7 +47,6 @@
 		public $status_label;
 		
 		/**
-		 *
 		 * @return array
 		 */
 		public function jsonSerialize(): array
@@ -56,13 +55,12 @@
 		}
 		
 		/**
-		 *
 		 * TODO refactor and mapper individual and remove public props
 		 * @param array $json
 		 *
 		 * @return $this
 		 */
-		public function mapperJson(array $json): Response
+		public function mapperJson(array $json)
 		{
 			if (is_array($json)) {
 				array_walk_recursive($json, function ($value, $key) {
@@ -73,11 +71,11 @@
 				});
 			}
 			
-			return $this->setResponseJSON($json);
+			$this->setResponseJSON($json);
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getErrorMessage()
@@ -86,17 +84,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $error_message
-		 * @return Response
 		 */
-		public function setErrorMessage($error_message): Response
+		public function setErrorMessage($error_message)
 		{
-			return $this->error_message = $error_message;
+			$this->error_message = $error_message;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getStatusCode()
@@ -105,17 +101,16 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $status_code
 		 * @return Response
 		 */
-		public function setStatusCode($status_code): Response
+		public function setStatusCode($status_code)
 		{
-			return $this->status_code = $status_code;
+			$this->status_code = $status_code;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getDescriptionDetail()
@@ -124,17 +119,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $description_detail
-		 * @return Response
 		 */
-		public function setDescriptionDetail($description_detail): Response
+		public function setDescriptionDetail($description_detail)
 		{
-			return $this->description_detail = $description_detail;
+			$this->description_detail = $description_detail;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getErrorDescription()
@@ -143,17 +136,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $description
-		 * @return Response
 		 */
-		public function setErrorDescription($description): Response
+		public function setErrorDescription($description)
 		{
-			return $this->description = $description;
+			$this->description = $description;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getPaymentId()
@@ -162,16 +153,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $payment_id
 		 */
-		public function setPaymentId($payment_id): Response
+		public function setPaymentId($payment_id)
 		{
-			return $this->payment_id = $payment_id;
+			$this->payment_id = $payment_id;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getSellerId()
@@ -180,12 +170,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $seller_id
 		 */
-		public function setSellerId($seller_id): Response
+		public function setSellerId($seller_id)
 		{
-			return $this->seller_id = $seller_id;
+			$this->seller_id = $seller_id;
+			return $this;
 		}
 		
 		/**
@@ -198,12 +188,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $amount
 		 */
-		public function setAmount($amount): Response
+		public function setAmount($amount)
 		{
-			return $this->amount = $amount;
+			$this->amount = $amount;
+			return $this;
 		}
 		
 		/**
@@ -216,12 +206,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $currency
 		 */
-		public function setCurrency($currency): Response
+		public function setCurrency($currency)
 		{
-			return $this->currency = $currency;
+			$this->currency = $currency;
+			return $this;
 		}
 		
 		/**
@@ -234,12 +224,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $order_id
 		 */
-		public function setOrderId($order_id): Response
+		public function setOrderId($order_id)
 		{
-			return $this->order_id = $order_id;
+			$this->order_id = $order_id;
+			return $this;
 		}
 		
 		/**
@@ -271,12 +261,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $status
 		 */
-		public function setStatus($status): Response
+		public function setStatus($status)
 		{
-			return $this->status = $status;
+			$this->status = $status;
+			return $this;
 		}
 		
 		/**
@@ -289,12 +279,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $received_at
 		 */
-		public function setReceivedAt($received_at): Response
+		public function setReceivedAt($received_at)
 		{
-			return $this->received_at = $received_at;
+			$this->received_at = $received_at;
+			return $this;
 		}
 		
 		/**
@@ -307,18 +297,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $array
 		 */
-		public function setResponseJSON($array): Response
+		public function setResponseJSON($array)
 		{
 			$this->responseJSON = json_encode($array, JSON_PRETTY_PRINT);
-			
 			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getMessage()
@@ -327,16 +314,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $message
 		 */
-		public function setMessage($message): Response
+		public function setMessage($message)
 		{
-			return $this->message = $message;
+			$this->message = $message;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getError_code()
@@ -345,11 +331,11 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $error_code
 		 */
-		public function setError_code($error_code): Response
+		public function setError_code($error_code)
 		{
-			return $this->error_code = $error_code;
+			$this->error_code = $error_code;
+			return $this;
 		}
 	}

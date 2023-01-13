@@ -93,6 +93,8 @@
 		}
 		
 		/**
+		 * @param Getnet $credencial
+		 * @return Token
 		 * @throws Exception
 		 */
 		public function setNumberToken(Getnet $credencial): Token

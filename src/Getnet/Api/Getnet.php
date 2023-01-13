@@ -26,7 +26,7 @@
 		private $authorization;
 		
 		// TODO add monolog
-		private $debug = true;
+		private $debug = false;
 		
 		/**
 		 *
@@ -38,9 +38,14 @@
 				$environment = Environment::production();
 			}
 			
+			$this->setClientId(getenv('GETNET_CLIENT_ID'));
+			$this->setClientSecret(getenv('GETNET_CLIENT_SECRET'));
 			$this->setEnvironment($environment);
 			
 			$request = new Request($this);
+			
+			var_dump($request->auth($this));
+			die();
 			
 			$request->auth($this);
 		}
@@ -61,7 +66,8 @@
 		 */
 		public function setClientId($client_id)
 		{
-			return $this->client_id = $client_id;
+			$this->client_id = $client_id;
+			return $this;
 		}
 		
 		/**
@@ -80,7 +86,8 @@
 		 */
 		public function setClientSecret($client_secret)
 		{
-			return $this->client_secret = $client_secret;
+			$this->client_secret = $client_secret;
+			return $this;
 		}
 		
 		/**
@@ -99,7 +106,8 @@
 		 */
 		public function setSellerId($seller_id)
 		{
-			return $this->seller_id = $seller_id;
+			$this->seller_id = $seller_id;
+			return $this;
 		}
 		
 		/**
@@ -112,13 +120,12 @@
 		}
 		
 		/**
-		 *
 		 * @param Environment $environment
-		 * @return Environment
 		 */
-		public function setEnvironment(Environment $environment): Environment
+		public function setEnvironment(Environment $environment): Getnet
 		{
-			return $this->environment = $environment;
+			$this->environment = $environment;
+			return $this;
 		}
 		
 		/**

@@ -97,7 +97,7 @@
 		 * @param string|null $order_id
 		 * @return Order
 		 */
-		public function order(string $order_id = null): Order
+		public function order($order_id = null)
 		{
 			$order = new Order($order_id);
 			$this->setOrder($order);
@@ -107,9 +107,8 @@
 		
 		/**
 		 *
-		 * @return Order
 		 */
-		public function getOrder(): Order
+		public function getOrder()
 		{
 			return $this->order;
 		}
@@ -118,9 +117,11 @@
 		 *
 		 * @param Order $order
 		 */
-		public function setOrder(Order $order): Order
+		public function setOrder(Order $order): Transaction
 		{
-			return $this->order = $order;
+			$this->order = $order;
+			
+			return $this;
 		}
 		
 		/**

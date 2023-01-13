@@ -53,9 +53,10 @@
 		 *
 		 * @param mixed $brand
 		 */
-		public function setBrand($brand): string
+		public function setBrand($brand)
 		{
-			return $this->brand = (string) $brand;
+			$this->brand = (string) $brand;
+			return $this;
 		}
 		
 		/**
@@ -68,12 +69,12 @@
 		}
 		
 		/**
-		 *
-		 * @param mixed $cardholder_name
+		 * @param string $cardholder_name
 		 */
-		public function setCardholderName($cardholder_name): string
+		public function setCardholderName(string $cardholder_name)
 		{
-			return $this->cardholder_name = (string) $cardholder_name;
+			$this->cardholder_name = $cardholder_name;
+			return $this;
 		}
 		
 		/**
@@ -89,9 +90,10 @@
 		 *
 		 * @param mixed $expiration_month
 		 */
-		public function setExpirationMonth($expiration_month): string
+		public function setExpirationMonth($expiration_month)
 		{
-			return $this->expiration_month = (string) $expiration_month;
+			$this->expiration_month = (string) $expiration_month;
+			return $this;
 		}
 		
 		/**
@@ -107,9 +109,10 @@
 		 *
 		 * @param mixed $expiration_year
 		 */
-		public function setExpirationYear($expiration_year): string
+		public function setExpirationYear($expiration_year)
 		{
-			return $this->expiration_year = (string) $expiration_year;
+			$this->expiration_year = (string) $expiration_year;
+			return $this;
 		}
 		
 		/**
@@ -125,9 +128,10 @@
 		 *
 		 * @param mixed $token
 		 */
-		public function setNumberToken($token): string
+		public function setNumberToken($token)
 		{
-			return $this->number_token = (string) $token->getNumberToken();
+			$this->number_token = (string) $token->getNumberToken();
+			return $this;
 		}
 		
 		/**
@@ -143,8 +147,9 @@
 		 *
 		 * @param mixed $security_code
 		 */
-		public function setSecurityCode($security_code): string
+		public function setSecurityCode($security_code)
 		{
-			return $this->security_code = (string) $security_code;
+			$this->security_code = (string) $security_code;
+			return $this;
 		}
 	}

@@ -36,7 +36,6 @@
 		private $cardholder_mobile;
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getAuthenticated()
@@ -45,16 +44,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $authenticated
 		 */
 		public function setAuthenticated($authenticated)
 		{
-			return $this->authenticated = $authenticated;
+			$this->authenticated = $authenticated;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getDelayed()
@@ -63,16 +61,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $delayed
 		 */
 		public function setDelayed($delayed)
 		{
-			return $this->delayed = $delayed;
+			$this->delayed = $delayed;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getDynamicMcc()
@@ -81,16 +78,15 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $dynamic_mcc
 		 */
 		public function setDynamicMcc($dynamic_mcc): int
 		{
-			return $this->dynamic_mcc = (int) $dynamic_mcc;
+			$this->dynamic_mcc = (int) $dynamic_mcc;
+			return $this;
 		}
 		
 		/**
-		 *
 		 * @return mixed
 		 */
 		public function getNumberInstallments()
@@ -99,12 +95,12 @@
 		}
 		
 		/**
-		 *
 		 * @param mixed $number_installments
 		 */
-		public function setNumberInstallments($number_installments): int
+		public function setNumberInstallments($number_installments)
 		{
-			return $this->number_installments = (int) $number_installments;
+			$this->number_installments = (int) $number_installments;
+			return $this;
 		}
 		
 		/**

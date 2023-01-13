@@ -4,7 +4,7 @@
 	use Source\Api\Getnet;
 	use Source\Api\Environment;
 
-	function testService(): Getnet
+	function testService()
 	{
 		$getnet = new Getnet(Environment::sandbox());
 		
@@ -12,3 +12,5 @@
 		
 		return $getnet;
 	}
+	
+	testService();
