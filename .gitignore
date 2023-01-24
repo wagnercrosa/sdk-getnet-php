@@ -10,3 +10,4 @@ composer.lock
 /tests/.phpunit.result.cache
 config/env.test.php
 .gitattributes
+index.php
