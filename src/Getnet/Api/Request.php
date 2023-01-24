@@ -171,12 +171,9 @@ class Request
         curl_close($curl);
 
         if ($statusCode >= 400) {
-            // TODO see what it means code 100
             throw new GetnetException($response, 100);
         }
 
-        // Status code 204 don't have content. That means $response will be always false
-        // Provides a custom content for $response to avoid error in the next if logic
         if ($statusCode === 204) {
             return [
                 'status_code' => 204
