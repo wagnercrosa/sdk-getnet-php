@@ -1,23 +1,19 @@
 <?php
-	namespace Source\Api\Traits;
+	namespace Getnet\Api\Traits;
 	
 	/**
-	 *
 	 * Trait Entity
 	 *
 	 * @package Getnet\Api
-	 *
 	 * @author Wagner Corrêa
-	 *
 	 */
 	trait TraitEntity
 	{
 		
 		/**
-		 *
-		 * @return array
+		 * @return mixed
 		 */
-		public function jsonSerialize(): array
+		public function jsonSerialize()
 		{
 			$entity = clone $this;
 			
@@ -51,10 +47,7 @@
 		 */
 		public function toJSON($hiddenNull = true)
 		{
-			if ($hiddenNull) {
-				return json_encode($this);
-			}
-			
+			if ($hiddenNull) return json_encode($this);
 			return json_encode(get_object_vars($this));
 		}
 		

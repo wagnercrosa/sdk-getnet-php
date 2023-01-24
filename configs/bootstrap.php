@@ -1,8 +1,8 @@
 <?php
 	require_once dirname(__DIR__, 1) . '/vendor/autoload.php';
 	
-	use Source\Api\Getnet;
-	use Source\Api\Environment;
+	use Getnet\Api\Getnet;
+	use Getnet\Api\Environment;
 
 	function testService()
 	{

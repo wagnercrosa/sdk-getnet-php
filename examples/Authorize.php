@@ -2,20 +2,17 @@
 	
 	require dirname(__DIR__, 1) . '/vendor/autoload.php';
 	
-	use Source\Api\Environment;
-	use Source\Api\Getnet;
-	use Source\Api\Transaction;
-	use Source\Api\Token;
-	use Source\Api\Credit;
-	use Source\Api\Customer;
-	use Source\Api\Card;
-	use Source\Api\Order;
+	use Getnet\Api\Environment;
+	use Getnet\Api\Getnet;
+	use Getnet\Api\Transaction;
+	use Getnet\Api\Token;
+	use Getnet\Api\Credit;
+	use Getnet\Api\Customer;
+	use Getnet\Api\Card;
+	use Getnet\Api\Order;
 	
 	
 	$getnet = new Getnet(Environment::sandbox());
-	
-	var_dump($getnet);
-	die();
 	
 	$transaction = new Transaction();
 	$transaction->setSellerId($getnet->getSellerId());
