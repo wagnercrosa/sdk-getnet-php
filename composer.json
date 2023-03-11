@@ -5,6 +5,7 @@
 	"license":"MIT",
 	"type":"library",
 	"homepage":"https://github.com/wagnercrosa/sdk-getnet-php",
+	"homepage":"https://github.com/diego-campos-fivebyfive/getnet-sdk",
 	"authors":[
 		{
 			"name":"Wagner Corrêa",
